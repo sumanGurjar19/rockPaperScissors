@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+ function  playRound(playerSelection,computerSelection){
+			//let answer1 = prompt("Please enter the your choice");
+			//let answer2 = prompt("Please enter the your choice");
+			
+
+			  if(playerSelection === computerSelection){
+			      console.log("Draw");
+			  }
+			  else if(playerSelection=="Rock" && computerSelection=="Scissor"){
+			      console.log("First Player is winner");
+			  }
+			  else if(playerSelection=="Scissor" && computerSelection=="Paper"){
+			      console.log("First Player is winner");
+			  } 
+			   
+			  else if(playerSelection=="Paper" && computerSelection=="Rock"){
+			      console.log("First Player is winner");
+			}else 
+			     console.log("Computer Player is winner");
+		}
+		
+		function getRandomChoice(){
+		  let randomNumber =Math.floor(Math.random() * 3)
+		  switch(randomNumber){
+		  case 0:
+		    return 'Rock'
+		  case 1:
+		    return 'Paper'
+	      case 3:
+		    return 'SCISSORS'
+		  }
+		}
+		 
+		
+		function game(){
+		const computerSelection=getRandomChoice()
+		let playerSelection=prompt("Please enter the your choice")
+		playRound(playerSelection,computerSelection);
+		}
+		game();
+  </script>
+</body>
+</html>
